@@ -1,126 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Linear Layout:"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:background="@color/colorAccent"/>
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:background="@color/colorPrimary"/>
-    </LinearLayout>
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Relative Layout:"/>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:id="@+id/imager1"
-            android:background="@color/colorPrimary"/>
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:id="@+id/imager2"
-            android:background="@color/colorAccent"
-            android:layout_below="@+id/imager1"/>
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:id="@+id/imager3"
-            android:layout_toRightOf="@id/imager2"
-            android:layout_below="@id/imager1"
-            android:background="@color/colorPrimaryDark"/>
-    </RelativeLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Frame Layout:"/>
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="100px"
-            android:layout_height="100px"
-            android:background="@color/colorAccent"
-            android:layout_gravity="center_horizontal"/>
-        <ImageView
-            android:layout_width="50px"
-            android:layout_height="50px"
-            android:background="@color/colorPrimaryDark"
-            android:layout_gravity="center"/>
-    </FrameLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Table Layout:"/>
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TableRow
-            android:gravity="center">
-            <ImageView
-                android:layout_width="100px"
-                android:layout_height="100px"
-                android:background="@color/colorPrimaryDark"/>
-        </TableRow>
-        <TableRow
-            android:gravity="center">
-            <ImageView
-                android:layout_width="50px"
-                android:layout_height="50px"
-                android:background="@color/colorPrimary"/>
-            <ImageView
-                android:layout_width="50px"
-                android:layout_height="50px"
-                android:background="@color/colorAccent"/>
-
-        </TableRow>
-    </TableLayout>
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Scroll View:"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="100px">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Linear Vertical"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
-        <ImageView
-            android:layout_width="80px"
-            android:layout_height="80px"
-            android:background="@color/colorAccent"/>
-        <ImageView
-            android:layout_width="80px"
-            android:layout_height="80px"
-            android:background="@color/colorPrimary"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimaryDark"/>
         </LinearLayout>
-    </ScrollView>
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Linear Horizontal"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimaryDark"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Relative"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+                android:id="@+id/oR1"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimaryDark"
+                android:id="@+id/oR2"
+                android:layout_below="@id/oR1"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@color/colorAccent"
+                android:id="@+id/oR3"
+                android:layout_below="@id/oR1"
+                android:layout_toRightOf="@id/oR2"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frame"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:background="@color/colorPrimary"
+
+                android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@color/colorPrimaryDark"
+
+                android:layout_gravity="center"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@color/colorAccent"
+
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Table"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TableRow
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:background="@color/colorPrimaryDark"/>
+            </TableRow>
+            <TableRow
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:background="@color/colorPrimary"/>
+                <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:background="@color/colorAccent"/>
+
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>
+</ScrollView>
